@@ -1,6 +1,7 @@
 {
     "name": "magic-jam/datetime",
     "homepage": "http://github.com/magic-jam/datetime",
+    "description": "Immutable datetime library",
     "type": "library",
     "license": "MIT",
     "authors": [
