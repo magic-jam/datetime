@@ -1,13 +1,13 @@
 <?php
-namespace mj;
+namespace mj\datetime;
 
-class DateTime extends \mj\Date
+class DateTime extends \mj\datetime\Date
 {
-	public function toDate() { return new Date($this->native); }
+    public function toDate() { return new Date($this->native); }
     public function toDateTime() { return $this; }
-    
-    protected function setNative(DateTime $dt) {
-        $this->native = $dt;
+
+    protected function adjustNativeTime($native) {
+        // do nothing
     }
     
     protected function setTime($h, $i, $s) {
