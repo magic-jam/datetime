@@ -3,13 +3,17 @@ namespace mj\datetime;
 
 class Clock
 {
-	private static $defaultClock = null;
+	private static $clock = null;
 
 	public static function defaultClock() {
-		if (self::$defaultClock === null) {
-			self::$defaultClock = new WallClock;
+		if (self::$clock === null) {
+			self::$clock = new WallClock;
 		}
-		return self::$defaultClock;
+		return self::$clock;
+	}
+
+	public static function setDefaultClock(ClockSource $clock) {
+		self::$clock = $clock;
 	}
 
 	public static function clock() {
